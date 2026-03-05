@@ -11,7 +11,7 @@ def run_silver_transformation():
     print("--- Iniciando Transformación Capa Silver ---")
 
     # 2. Leer los datos crudos desde la Capa Bronze en HDFS
-    bronze_path = "hdfs://localhost:9000/datalake/bronze/food_imports/FoodImports.csv"
+    bronze_path = "hdfs://localhost:9000/datalake/bronze/food_imports"
     
     df_bronze = spark.read.csv(bronze_path, header=True, inferSchema=True)
 
